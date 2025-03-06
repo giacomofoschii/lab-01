@@ -3,14 +3,14 @@ package pcd.lab01.ex01;
 import org.fusesource.jansi.Ansi.*;
 import java.util.Random;
 
-public class Word extends Thread {
+public class WordAgent extends Thread {
     private final String word;
     private final int pos;
     private int y;
     private final int finalY;
     private final Random random;
 
-    public Word(final String word, final int pos) {
+    public WordAgent(final String word, final int pos) {
         this.word = word;
         this.pos = pos;
         this.y = 0;

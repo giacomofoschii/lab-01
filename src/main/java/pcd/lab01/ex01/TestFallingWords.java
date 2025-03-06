@@ -3,7 +3,7 @@ package pcd.lab01.ex01;
 import static org.fusesource.jansi.Ansi.*;
 import static pcd.lab01.ex01.AuxLib.*;
 
-public class TestAuxLib {
+public class TestFallingWords {
 
 	public static void main(String[] args) throws InterruptedException {
 		
@@ -21,7 +21,7 @@ public class TestAuxLib {
 		for (var wp: wordList) {
 			var word = wp.word();
 			var pos = wp.pos();
-			Thread w = new Word(word, pos);
+			Thread w = new WordAgent(word, pos);
 			w.start();
 		}
 
