@@ -1,4 +1,4 @@
-package pcd.lab01.ex02.sol;
+package pcd.lab01.ex02.solution;
 
 import java.util.List;
 
@@ -36,13 +36,13 @@ public class MergingWorkerGeneral extends AbstractWorker {
 	}
 	
 	private int[] merge(int[] v, int nParts) {
-		int[] vnew = new int[v.length];
+		var vnew = new int[v.length];
 
 		int partSize = v.length/nParts;
 		int from = 0; 
 
-		int[] indexes = new int[nParts];
-		int[] max = new int[nParts];
+		var indexes = new int[nParts];
+		var max = new int[nParts];
 		for (int i = 0; i < indexes.length - 1; i++) {
 			indexes[i] = from;
 			max[i] = from + partSize;

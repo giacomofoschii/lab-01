@@ -1,4 +1,4 @@
-package pcd.lab01.ex02.sol;
+package pcd.lab01.ex02.solution;
 
 import java.util.*;
 
@@ -21,7 +21,7 @@ public class ConcurrentSortGeneral {
 		log("Spawning workers to do sorting (" + VECTOR_SIZE + " elements)...");
 	
 		
-		int nAgents = Runtime.getRuntime().availableProcessors();
+		int nAgents = Runtime.getRuntime().availableProcessors() + 1;
 		int jobSize = v.length/nAgents;
 		int from = 0; 
 		int to = jobSize - 1;
@@ -100,6 +100,6 @@ public class ConcurrentSortGeneral {
 	}
 
 	private static void log(String msg) {
-		System.out.println(msg);
+		System.out.println("[ " + System.currentTimeMillis() +  " ][ " + Thread.currentThread().getName() + " ] " + msg); 
 	}
 }

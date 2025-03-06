@@ -1,4 +1,4 @@
-package pcd.lab01.ex02.sol;
+package pcd.lab01.ex02.solution;
 
 import java.util.Arrays;
 
